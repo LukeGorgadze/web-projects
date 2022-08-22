@@ -3,14 +3,23 @@
 }
 .header {
   font-family: "Roboto Mono", monospace;
-  font-size: 20px;
+  font-size: 2vw;
   text-align: center;
   background-color: #74b9ff;
   border-radius: 15px;
   width: 50%;
-  margin: 100px auto 0 auto;
+  margin: 50px auto 0 auto;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 4vw;
+    border-radius: 15px;
+    width: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 .icon{
   width: 60px;
@@ -72,18 +81,60 @@ h4 {
  animation-duration: 1s; or: Xms */
 
 }
+.btn {
+  margin: 0 20px;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid;
+  font-size: 2vw;
+  font-size: 18px;
+}
+btn:focus {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  .cardImgContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 130px;
+  }
+
+  .cardImg {
+    width: 50%;
+    
+   }
+   h4{
+    font-size: 3.5vw;
+   }
+
+   .container {
+    width: 80%;
+    margin: 100px auto;
+    background-color: #74b9ff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  .btn {
+    margin: 0 3px;
+    height: 40px;
+    width: 60px;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 10px;
+    font-weight: 800;
+  }
+}
 
 .btns {
   display: inline;
 }
 
-.btn {
-  margin: 0 5px;
-  height: 40px;
-  width: 80px;
-  border-radius: 10px;
-  border: 1px solid;
-}
+
 .btn:hover {
   background-color: #55efc4;
 }
