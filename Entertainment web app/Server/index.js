@@ -8,6 +8,13 @@ const checkUser = require("./middlewares/authmiddlewares")
 const cookieParser = require("cookie-parser")
 const app = express();
 
+app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
+});
+
+
 app.listen(5000,(req,res) => {
   console.log("server started")
 
@@ -27,6 +34,7 @@ mongoose.connect(process.env.MONGO_URI, {
     method: ["GET","POST"],
     credentials: true
 }))
+
 
 
 app.use(cookieParser())

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import { axiosInstance } from "../config";
 const Register = () => {
   const navigate = useNavigate()
   const [values, setValues] = useState({
@@ -14,7 +15,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5000/register", {
+      const { data } = await axiosInstance.post("http://localhost:5000/register", {
         ...values,
       },
       {
